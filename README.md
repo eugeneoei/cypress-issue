@@ -2,11 +2,13 @@
 
 This repository reproduces error stated. Runs on `NodeJS` and requires `nodemon`.
 
-![Screenshot for Cypress error][screenshots/error.png]
+Error when Cypress is run.
+
+![error screenshot](./screenshots/error.png)
 
 When the same action is executed on the browser, error does not happened.
 
-![Screenshot for Browser success][screenshots/success.png]
+![success screenshot](./screenshots/success.png)
 
 ---
 
