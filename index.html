@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cypress Issue</title>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<button id='button'>
+		Click me to make API call to /api/query with query string tag=10%
+	</button>
+	<script>
+		document
+		.getElementById('button')
+		.addEventListener(
+			'click',
+			() => {
+				axios.get('/api/query?tag=10%')
+					.then(function (response) {
+						const messageDiv = document.createElement('div')
+						messageDiv.append(document.createTextNode('query to /api/query?tag=10% success'))
+						document.body.append(messageDiv)
+					})
+					.catch(function (error) {
+						console.log(error)
+						const messageDiv = document.createElement('div')
+						const errorDiv = document.createElement('div')
+						messageDiv.append(document.createTextNode(
+							`query to /api/query?tag=10% failed`
+						))
+						errorDiv.append(document.createTextNode(error))
+						document.body.append(messageDiv)
+						document.body.append(errorDiv)
+					})
+			}
+			)
+		</script>
+	</body>
+</html>
