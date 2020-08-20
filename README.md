@@ -1,6 +1,12 @@
 ## Cypress throws `URI malformed` error when `GET` request with query string is made eg. `/api/query?tag=10%`
 
-This repository reproduces error stated. Runs on `NodeJS` and requires `nodemon`
+This repository reproduces error stated. Runs on `NodeJS` and requires `nodemon`.
+
+![Screenshot for Cypress error][./screenshots/error.png]
+
+When the same action is executed on the browser, error does not happened.
+
+![Screenshot for Browser success][./screenshots/success.png]
 
 ---
 
@@ -22,5 +28,4 @@ npm run start
 npm run cypress
 ```
 
-4. Run Spec file
-Select `test.spec.js`
+4. Run `test.spec.js` file
